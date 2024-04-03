@@ -2,6 +2,12 @@
 
  <% students = ["John", "Jane", "Sue", "Mary"] %>
 
-<h2>Now is <%=Time.now   %></h2>
+<h2>List of my students</h2>
 
-<h2>My first student is <%= students.first %></h2>
+
+<ul>
+
+  <%students.each do |student|%>
+    <li><%= student %></li>
+  <% end  %>
+</ul>
