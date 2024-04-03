@@ -1,13 +1,21 @@
 <h1>Home page top main</h1>
 
- <% students = ["John", "Jane", "Sue", "Mary"] %>
 
 <h2>List of my students</h2>
 
+<form action="/">
+<input type="text" name="student_name">
+<input type="submit">
+</form>
 
 <ul>
 
-  <%students.each do |student|%>
+  <%@students.each do |student|%>
     <li><%= student %></li>
   <% end  %>
 </ul>
+
+
+<%= link_to 'Contact Page', contact_path %>
+
+<%= link_to 'About Page', about_path %>
