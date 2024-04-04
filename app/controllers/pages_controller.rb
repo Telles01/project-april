@@ -10,10 +10,10 @@ class PagesController < ApplicationController
 
   def home
     @students = ["John", "Jane", "Sue", "Mary"]
-    user_input = params[:student_name]
+    user_input = params[:student_length]
 
     if user_input.present?
-      @students = @students.select { |student| student.start_with?(user_input) }
+      @students = @students.select { |student| student.lenght(user_input) }
 
     end
   end
